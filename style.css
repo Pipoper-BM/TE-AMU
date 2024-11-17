@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    position: relative;
+}
+
+.contenedor {
+    text-align: center;
+    z-index: 10;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#si {
+    background-color: green;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+#no {
+    background-color: red;
+    color: white;
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+#no.creciendo {
+    font-size: 60px;  /* Tamaño grande del texto */
+    padding: 50px 80px;  /* Aumento de padding */
+    transition: all 0.3s ease; /* Suavizar el cambio de tamaño */
+}
+
+h1 {
+    font-size: 24px;
+}

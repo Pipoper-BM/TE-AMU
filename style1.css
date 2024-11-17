@@ -1,0 +1,75 @@
+/* Estilo para el cuerpo del documento */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0b1522;
+    position: relative; /* Asegura que el contenido se alinee correctamente */
+}
+
+/* Estilo para el corazón */
+.corazon {
+    width: 80px; /* Ajusté un poco el ancho */
+    height: 80px;
+    background: #f20044;
+    position: relative;
+    transform: rotate(-45deg); /* Solo rotamos la base del corazón */
+    transform-origin: center;
+    animation: corazon 0.6s linear infinite; /* Animación */
+}
+
+/* Animación del corazón */
+@keyframes corazon {
+    0% {
+        transform: rotate(-45deg) scale(1.03);  /* Escala ligeramente más grande al inicio */
+    }
+    50% {
+        transform: rotate(-45deg) scale(1);    /* Escala normal en el medio de la animación */
+    }
+    100% {
+        transform: rotate(-45deg) scale(0.9);  /* Escala ligeramente más pequeña al final */
+    }
+}
+
+/* Pseudo-elemento para la parte superior del corazón (izquierda) */
+.corazon:before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #f20044;
+    border-radius: 50%; /* Forma circular */
+    top: 0px; /* Subimos más para alinearlo correctamente */
+    left: 40px; /* Alineación hacia el centro */
+    box-shadow: -20px -20px 190px rgba(242, 0, 68, 0.6); /* Sombra suave */
+}
+
+/* Pseudo-elemento para la parte superior del corazón (derecha) */
+.corazon:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #f20044;
+    border-radius: 50%; /* Forma circular */
+    top: -40px; /* Subimos más para alinearlo correctamente */
+    right: 0px; /* Alineación hacia el centro */
+    box-shadow: 20px 20px 190px rgba(242, 0, 68, 0.6); /* Sombra suave */
+}
+
+/* Estilo para el mensaje */
+.mensaje {
+    position: absolute;
+    top: 110px; /* Ajustamos el mensaje para que no choque con el corazón */
+    left: 50%;
+    transform: translateX(-50%); /* Centra el mensaje horizontalmente */
+    color: aliceblue;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-style: oblique;
+    font-weight: bold;
+    text-align: center;
+}
